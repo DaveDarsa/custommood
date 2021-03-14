@@ -80,7 +80,7 @@ export const StyledHeader = styled.header`
       flex-direction: column;
       justify-content: space-around;
 
-      .sun button {
+      .sunrise button {
         color: #fc8561;
       }
       .morning button {

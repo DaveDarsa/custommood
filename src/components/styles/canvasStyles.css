@@ -1,0 +1,649 @@
+.container {
+  position: absolute;
+  top: 33vh;
+  left: 50.67%;
+  transform: translate(-50%, -50%) scale(0.81) scaleY(1.1);
+  width: 49vw;
+  height: 50vh;
+
+  overflow: hidden;
+}
+.window {
+  position: absolute;
+  width: 60vw;
+  top: 6vh;
+  left: 21%;
+  transform: scaleY(0.91);
+}
+.window svg {
+  width: 100%;
+}
+.couch {
+  position: absolute;
+  top: 39.2vh;
+  left: 55.13vw;
+  display: inline-block;
+}
+.couch img {
+  width: 32.2vw;
+  display: inline-block;
+}
+
+.backgroundgradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 1;
+}
+
+.mountain {
+  position: absolute;
+  top: 50.9%;
+  left: 0;
+  height: auto;
+  width: 100%;
+  height: 20%;
+  z-index: 50;
+  opacity: 1;
+  transform: scaleY(1.3) scaleX(1.1);
+}
+
+.mountain svg {
+  width: 100%;
+}
+
+.fartrees {
+  position: absolute;
+  top: 74.5%;
+  left: 31%;
+  z-index: 55;
+  width: 39%;
+  transform: scale(1.2);
+}
+.fartrees svg {
+  width: 100%;
+}
+
+.farfrontleft {
+  position: absolute;
+  width: 38.5%;
+  top: 73.5%;
+  left: -5.5%;
+  z-index: 50;
+  transform: rotateY(200deg) rotateZ(5deg) rotateX(30deg) translateY(1%);
+}
+
+.farfrontleft svg {
+  width: 100%;
+  width: 0;
+}
+
+.farfrontright {
+  position: absolute;
+  width: 33%;
+  top: 69.9%;
+  right: -2%;
+  z-index: 22;
+  transform: rotateY(201deg) rotateZ(-5.5deg) rotateX(-30deg) scaleX(-1)
+    scaleY(0.9) scale(1.08) translateY(5%);
+}
+.farfrontright svg {
+  width: 100%;
+  width: 0;
+}
+.water {
+  position: absolute;
+  top: 82%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 150;
+}
+.water svg {
+  width: 100%;
+}
+.waves {
+  background: #667e94;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 50px;
+  width: 20%;
+  z-index: 88000;
+}
+.waves svg {
+  width: 20px;
+}
+.firstwave,
+.secondwave {
+  z-index: 88000;
+  top: 35%;
+  left: -50%;
+  position: absolute;
+  width: 1px;
+}
+.firstwave {
+  animation: firstwave 40s ease-in-out forwards infinite;
+}
+.secondwave {
+  top: 40%;
+  animation: secondwave 40s ease-in-out forwards infinite;
+}
+@keyframes firstwave {
+  0% {
+    transform: translateY(2px);
+
+    left: -60%;
+  }
+  10% {
+    transform: translateY(-2px);
+  }
+  20% {
+    transform: translateY(2px);
+  }
+  30% {
+    transform: translateY(-2px);
+  }
+  40% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  60% {
+    transform: translateY(2px);
+  }
+  70% {
+    transform: translateY(-2px);
+  }
+  80% {
+    transform: translateY(2px);
+  }
+  90% {
+    transform: translateY(-2px);
+  }
+  100% {
+    left: 100%;
+    transform: translateY(2px);
+  }
+}
+
+@keyframes secondwave {
+  0% {
+    transform: translateY(-4px);
+    left: -62%;
+  }
+  10% {
+    transform: translateY(4px);
+  }
+  20% {
+    transform: translateY(-4px);
+  }
+  30% {
+    transform: translateY(4px);
+  }
+  40% {
+    transform: translateY(-4px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+  70% {
+    transform: translateY(4px);
+  }
+  80% {
+    transform: translateY(-4px);
+  }
+  90% {
+    transform: translateY(4px);
+  }
+  100% {
+    left: 100%;
+    transform: translateY(-4px);
+  }
+}
+
+.firstview {
+  position: absolute;
+  bottom: -2%;
+  left: -20%;
+  width: 145%;
+  z-index: 200;
+}
+.firstview svg {
+  width: 100%;
+}
+
+.firstviewright {
+  position: absolute;
+  z-index: 300;
+  width: 165%;
+  bottom: -20%;
+  right: -104%;
+  transform: scaleX(-1) scale(0.7);
+}
+.firstviewleft {
+  position: absolute;
+  z-index: 300;
+  width: 100%;
+  bottom: -15%;
+  left: -62.4%;
+  transform: scale(0.9);
+}
+
+.leftgrass {
+  position: absolute;
+  top: 90%;
+  left: 10.5%;
+  width: 30.5%;
+  z-index: 202;
+}
+.leftgrass svg {
+  width: 100%;
+}
+.middlegrass {
+  position: absolute;
+  top: 86%;
+  left: 35.2%;
+  width: 32%;
+  z-index: 303;
+}
+.middlegrass svg {
+  width: 100%;
+}
+.rightgrass {
+  position: absolute;
+  width: 23%;
+  top: 89.5%;
+  left: 56%;
+  z-index: 301;
+}
+.rightgrass svg {
+  width: 100%;
+}
+.closeforestleft {
+  position: absolute;
+  top: 64%;
+  left: -55%;
+  width: 67.5%;
+  z-index: 192;
+  transform: scale(1.49);
+}
+.closeforestleft svg {
+  width: 100%;
+}
+.closeforest {
+  position: absolute;
+  top: 74.5%;
+  left: 25%;
+  width: 43%;
+  z-index: 191;
+  transform: scale(1.5);
+}
+.closeforest svg {
+  width: 100%;
+}
+.closeforestright {
+  position: absolute;
+  z-index: 192;
+  top: 55.5%;
+  left: 70%;
+  width: 50%;
+  transform: rotateZ(10deg) scale(1.9);
+}
+.closeforestright svg {
+  width: 100%;
+}
+
+.mtright {
+  position: absolute;
+  z-index: 180;
+  top: 35%;
+  right: -27%;
+  width: 100%;
+}
+.mtforestright svg {
+  width: 100%;
+}
+
+@keyframes moveobjects {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.suncont,
+.mooncont {
+  width: 31%;
+  position: absolute;
+  top: 65%;
+  left: 51%;
+  height: 20px;
+  transform-origin: 0 50%;
+  z-index: 10000;
+  animation: moveobjects 150s linear infinite forwards;
+  z-index: 10;
+}
+.mooncont {
+  margin-top: 0;
+  animation-delay: 75s;
+}
+
+.sun {
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 3vw;
+  height: 3vw;
+  z-index: 10;
+  filter: blur(1px);
+  background: radial-gradient(circle, #fff2cc 15%, #ffd966 70%, #fc9601 100%);
+}
+@keyframes pulse {
+  0% {
+    opacity: 0.9;
+  }
+  30% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(3.5);
+    opacity: 0;
+  }
+}
+.sunpulse {
+  content: "";
+  position: absolute;
+  width: 1.5vw;
+  height: 1.5vw;
+  top: 0.75vw;
+  left: 0.75vw;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: #fff2cc;
+  animation: pulse 2s ease infinite forwards;
+}
+.moon {
+  position: absolute;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  width: 3vw;
+  height: 3vw;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+  box-shadow: 0px 1px 60px 0px rgba(253, 253, 253, 1);
+}
+.moon svg {
+  display: block;
+  margin: auto;
+  width: 111%;
+  transform: translateY(-11%) translateX(-5.5%);
+}
+
+.starcanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.raincanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 400;
+}
+.fireflies {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 350;
+}
+
+.tail {
+  position: absolute;
+  top: 10;
+  left: 0;
+  z-index: 400;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  text-align: center;
+}
+.tail * {
+  transform: rotate(90deg);
+}
+.tail-segment {
+  background-color: #000000;
+  position: absolute;
+  height: 20px;
+  border-radius: 25px;
+  top: 0;
+  left: 50;
+  transform: rotate(-10deg);
+  animation: tail-swish 5s infinite cubic-bezier(0.8, 0, 0.2, 1);
+}
+.cat {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 54%;
+  left: 60%;
+}
+.cat img {
+  width: 80px;
+  position: absolute;
+  display: block;
+  z-index: 500;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tail {
+  left: 30%;
+  top: 250%;
+  transform: rotate(90deg);
+  -webkit-font-smoothing: antialiased;
+}
+
+.tail-segment {
+  background-color: #000000;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  height: 15px;
+  width: 20px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 235px;
+  -webkit-font-smoothing: antialiased;
+  left: 8px;
+  animation: tail-swish 5s infinite cubic-bezier(0.8, 0, 0.2, 1);
+}
+
+@keyframes tail-swish {
+  0% {
+    transform: rotate(8deg);
+  }
+  10% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(8deg);
+  }
+}
+
+@keyframes reflectionmove {
+  from {
+    left: 60%;
+  }
+  to {
+    left: 20%;
+  }
+}
+.reflections {
+  position: absolute;
+  padding: 0 1.5rem;
+  z-index: 160;
+  top: 82%;
+  left: 65%;
+  width: 5vw;
+  height: 5vh;
+  clip-path: polygon(35% 0, 75% 0, 65% 100%, 25% 100%);
+  transform: skew(-20deg, 0deg);
+  animation: reflectionmove 75s linear alternate infinite;
+}
+.sunreflection {
+  position: absolute;
+  width: 2vw;
+  top: 0;
+  right: 0;
+  height: 5vh;
+  /* clip-path: polygon(35% 0, 75% 0, 65% 100%, 25% 100%); */
+}
+
+.sunreflection {
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  transform: rotateZ(6deg);
+}
+.sunreflection li {
+  padding-left: 20%;
+  width: 70%;
+  margin-left: 8px;
+}
+.sunreflection li:nth-child(odd) {
+  /* align-self: flex-end; */
+  margin-left: 20px;
+}
+.sunreflection li:nth-child(odd) img {
+  animation: sparkle 0.5s ease-out infinite alternate;
+  width: 15%;
+  margin-top: 3px;
+}
+.sunreflection li:nth-child(even) img {
+  animation: sparkle 0.4s ease-in-out infinite alternate;
+  margin-top: 1px;
+  width: 13%;
+}
+.sunreflection li img {
+  display: block;
+  margin: auto;
+}
+@keyframes sparkle {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 1;
+  }
+
+  15% {
+    opacity: 1;
+  }
+  16.5% {
+    opacity: 0.2;
+  }
+  16.6% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.deer1 {
+  position: absolute;
+  top: 70%;
+  left: 1%;
+  width: 15%;
+  z-index: 200;
+  animation: fadeout 150s ease-in-out infinite;
+}
+
+.deer2 {
+  opacity: 0;
+  position: absolute;
+  top: 80%;
+  left: 23%;
+  width: 15%;
+  z-index: 200;
+  animation: fadeout 150s ease-in-out infinite;
+  animation-delay: 25s;
+}
+
+.deer3 {
+  position: absolute;
+  opacity: 0;
+  top: 75%;
+  right: 30%;
+  width: 12%;
+  z-index: 200;
+  animation: fadeout 150s ease-in-out infinite;
+  animation-delay: 50s;
+}
+@keyframes owlanim {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 1;
+  }
+  48% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.owl {
+  opacity: 0;
+  position: absolute;
+  z-index: 200;
+  top: 40%;
+  left: 29%;
+  width: 25px;
+  animation: owlanim ease-in-out 150s infinite;
+  animation-delay: 75s;
+}
+.owl img {
+  width: 100%;
+  display: block;
+}

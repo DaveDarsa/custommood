@@ -17,7 +17,7 @@ const Header = () => {
               <FontAwesomeIcon icon={faClock} style={{ marginLeft: ".5rem" }} />
             </h5>
             <ul>
-              <li className="sun">
+              <li className="sunrise">
                 <button>Sunrise</button>
               </li>
               <li className="morning">
