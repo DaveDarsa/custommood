@@ -7,6 +7,7 @@ import sparkle from "../images/sparkle.svg";
 import owl from "../images/owl.svg";
 import couchImg from "../images/couch.png";
 import kitty from "../images/cat.svg";
+
 const CustomView = () => {
   return (
     <>
@@ -918,7 +919,7 @@ const CustomView = () => {
         <div className="owl">
           <img src={owl} alt="" />
         </div>
-        <canvas id="raincanvas" className="raincanvas"></canvas>
+        <canvas id="raincanv" className="raincanvas"></canvas>
         <canvas id="starcanvas" className="starcanvas"></canvas>
         <canvas id="fireflies" className="fireflies"></canvas>
       </div>

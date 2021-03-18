@@ -1,11 +1,11 @@
-export const Raincanvas = (function () {
+export const Raincanvas = function () {
   const container = document.getElementById("animcontainer");
-  const canvas = document.getElementById("raincanvas");
+  const canvas = document.getElementById("raincanv");
   canvas.height = container.offsetHeight;
   canvas.width = container.offsetWidth;
   var ctx = canvas.getContext("2d");
   var firstRun = true;
-
+  var animID;
   function splash(x, y) {
     this.x = x;
     this.y = y + 2;
@@ -26,13 +26,14 @@ export const Raincanvas = (function () {
     };
     splash.prototype.update = function () {
       this.draw();
+
       this.x += this.velocity.x;
-      this.y += this.velocity.y + (this.gravity * 1) / 1.5;
+      this.y += this.velocity.y + (this.gravity * 1) / 2;
       let idx = splashes.indexOf(this);
 
       setTimeout(() => {
         splashes.splice(idx, 1);
-      }, 100);
+      }, 150);
     };
   }
 
@@ -95,21 +96,39 @@ export const Raincanvas = (function () {
 
   //animation
   function animate() {
-    requestAnimationFrame(animate);
-
     ctx.fillStyle = "rgba(100, 100, 150,.8)";
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    console.log(animID);
     rain.forEach((drop) => {
       drop.update();
     });
     splashes.forEach((splashs) => {
       splashs.update();
     });
-
+    //prevent multiple loops
+    if (!animID) {
+      return;
+    }
+    requestAnimationFrame(animate);
     firstRun = false;
   }
+  function start() {
+    init();
+    canvas.height = container.offsetHeight;
+    canvas.width = container.offsetWidth;
+    animID = requestAnimationFrame(animate);
+  }
+  function pause() {
+    rain = [];
+    splashes = [];
+    console.log("paused");
+    cancelAnimationFrame(animID);
+    animID = null;
+  }
+
   return {
     init,
-    animate,
+    start,
+    pause,
   };
-})();
+};
