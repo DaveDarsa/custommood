@@ -1,4 +1,4 @@
-const Starcanvas = (function starcanvas() {
+export const Starcanvas = function starcanvas() {
   const container = document.getElementById("animcontainer");
   let canvas = document.getElementById("starcanvas");
   let ctx = canvas.getContext("2d");
@@ -6,6 +6,7 @@ const Starcanvas = (function starcanvas() {
   canvas.width = container.offsetWidth;
   let paused = true;
   let day = true;
+
   function star() {
     this.x = Math.random() * canvas.width;
     this.y = Math.random() * canvas.height;
@@ -111,10 +112,17 @@ const Starcanvas = (function starcanvas() {
       });
     }
   }
+  function start() {
+    init();
+    canvas.height = container.offsetHeight;
+    canvas.width = container.offsetWidth;
+    requestAnimationFrame(animate);
+  }
+
   return {
     init,
-    animate,
+    start,
     paused,
     day,
   };
-})();
+};

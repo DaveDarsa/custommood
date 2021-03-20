@@ -96,38 +96,36 @@ export const Raincanvas = function () {
 
   //animation
   function animate() {
+    //prevent multiple loops
+    if (!animID) {
+      return;
+    }
     ctx.fillStyle = "rgba(100, 100, 150,.8)";
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    console.log(animID);
+
     rain.forEach((drop) => {
       drop.update();
     });
     splashes.forEach((splashs) => {
       splashs.update();
     });
-    //prevent multiple loops
-    if (!animID) {
-      return;
-    }
+
     requestAnimationFrame(animate);
     firstRun = false;
   }
+
   function start() {
     init();
-    canvas.height = container.offsetHeight;
-    canvas.width = container.offsetWidth;
     animID = requestAnimationFrame(animate);
   }
   function pause() {
-    rain = [];
-    splashes = [];
     console.log("paused");
     cancelAnimationFrame(animID);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     animID = null;
   }
 
   return {
-    init,
     start,
     pause,
   };

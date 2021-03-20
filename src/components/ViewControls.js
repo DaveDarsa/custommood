@@ -4,23 +4,36 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faCloudSunRain } from "@fortawesome/free-solid-svg-icons";
 //canvas scripts
 import { Raincanvas } from "../canvasScripts/raincanvas";
+import { Starcanvas } from "../canvasScripts/starcanvas";
 
 const ViewControls = () => {
   const [isRaining, setIsRaining] = useState(false);
-
+  const [rain, setRain] = useState("");
+  const [justmounted, setJustmounted] = useState(true);
+  //night sky
   useEffect(() => {
-    var test = Raincanvas();
-    if (isRaining) {
-      console.log("raining");
-      test.init();
-      test.start();
-    } else {
-      test.pause();
-    }
+    console.log("stars??");
+    var stars = Starcanvas();
+    stars.start();
+  }, [justmounted]);
 
-    return () => {
-      test.pause();
-    };
+  //initialize rain script
+  useEffect(() => {
+    setTimeout(() => {
+      if (rain === "") {
+        setRain(Raincanvas());
+      }
+      setJustmounted(false);
+    }, 200);
+  }, [rain, isRaining]);
+  //toggle rain
+  useEffect(() => {
+    if (isRaining) {
+      rain.start();
+    } else {
+      if (justmounted) return;
+      rain.pause();
+    } //eslint-disable-next-line
   }, [isRaining]);
 
   return (

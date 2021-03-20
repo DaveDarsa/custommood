@@ -6,6 +6,7 @@ export const StyledHeader = styled.header`
   min-height: 10vh;
   color: white;
   overflow: hidden;
+  position: relative;
   .title {
     text-align: center;
     font-family: "Playball", cursive;
