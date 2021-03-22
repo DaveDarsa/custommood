@@ -406,6 +406,12 @@
   left: 0;
   z-index: 400;
 }
+.snowcanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 400;
+}
 .fireflies {
   position: absolute;
   top: 0;
@@ -503,7 +509,7 @@
 }
 .reflections {
   position: absolute;
-  padding: 0 1.5rem;
+  padding: 0 2.6rem;
   z-index: 160;
   top: 82%;
   left: 65%;
@@ -637,7 +643,7 @@
   opacity: 0;
   position: absolute;
   z-index: 200;
-  top: 40%;
+  top: 32%;
   left: 29%;
   width: 25px;
   animation: owlanim ease-in-out 150s infinite;

@@ -920,6 +920,7 @@ const CustomView = () => {
           <img src={owl} alt="" />
         </div>
         <canvas id="raincanv" className="raincanvas"></canvas>
+        <canvas id="snowcanvas" className="snowcanvas"></canvas>
         <canvas id="starcanvas" className="starcanvas"></canvas>
         <canvas id="fireflies" className="fireflies"></canvas>
       </div>

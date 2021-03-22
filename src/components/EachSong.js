@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { CurrentSongcontext } from "../contexts/SongContextProvider";
 const EachSong = (props) => {
+  const [, setCurrentSong] = useContext(CurrentSongcontext);
   const { title, channel, thumbnail, src } = props.song;
   return (
-    <StyledSong>
+    <StyledSong
+      onClick={() => {
+        setCurrentSong(src);
+      }}
+    >
       <div className="songimg">
         <img src={thumbnail} alt="" />
       </div>

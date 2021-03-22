@@ -37,7 +37,6 @@ export const PlaylistContextProvider = (props) => {
         };
       });
 
-      console.log(info);
       setMusicList(info);
     }
     getData();

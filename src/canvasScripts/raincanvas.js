@@ -45,10 +45,10 @@ export const Raincanvas = function () {
     this.y = firstRun ? Math.random() * canvas.height : Math.random() - 0.5;
     this.d = Math.random() * 10 + 10;
     drop.prototype.draw = function () {
-      // ctx.fillStyle = "rgba(52, 96, 138,.8)";
+      ctx.fillStyle = "rgba(52, 96, 138,.8)";
       // ctx.fillRect(this.x, this.y, this.width, this.height);
-      ctx.strokeStyle = "rgba(52,96,138,.4)";
-      ctx.strokeStyle = "rgba(255,255,255,.3)";
+      // ctx.strokeStyle = "rgba(202,202,202,.3)";
+      ctx.strokeStyle = "rgba(255,255,255,.35)";
       ctx.fillStyle = "rgba(143, 190, 235,.8)";
       ctx.beginPath();
       ctx.moveTo(this.x, this.y);

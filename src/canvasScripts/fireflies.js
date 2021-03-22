@@ -1,4 +1,4 @@
-const Fireflies = (function firefliescanvas() {
+export const Fireflies = function fireflies() {
   const container = document.getElementById("animcontainer");
   var canvas = document.getElementById("fireflies");
   var ctx = canvas.getContext("2d");
@@ -83,13 +83,20 @@ const Fireflies = (function firefliescanvas() {
       });
     }
   }
+  function start() {
+    init();
+    canvas.height = container.offsetHeight;
+    canvas.width = container.offsetWidth;
+    requestAnimationFrame(animate);
+  }
   setInterval(() => {
     day = !day;
     init();
   }, 75000);
 
   return {
+    start,
     animate,
     init,
   };
-})();
+};

@@ -7,6 +7,7 @@ import EachSong from "./EachSong";
 const Sidebar = () => {
   const [sidebarToggled, setSidebarToggled] = useContext(PlaylistContext);
   const [, , musicList] = useContext(PlaylistContext);
+
   return (
     <StyledSidebar toggled={sidebarToggled}>
       <span
@@ -21,7 +22,7 @@ const Sidebar = () => {
       <div className="songs">
         {musicList &&
           musicList.map((song) => {
-            return <EachSong song={song} />;
+            return <EachSong song={song} key={Math.random()} />;
           })}
       </div>
     </StyledSidebar>
@@ -34,9 +35,9 @@ const StyledSidebar = styled.div`
   top: 0;
   left: 0;
   opacity: 0.9;
-  height: 110vh;
+  height: 100%;
   width: 20vw;
-  overflow-y: scroll;
+  overflow: hidden;
   padding: 2rem 0.5rem;
   z-index: 1000;
   transition: 0.3s ease-out;

@@ -5,27 +5,35 @@ import { faClock, faCloudSunRain } from "@fortawesome/free-solid-svg-icons";
 //canvas scripts
 import { Raincanvas } from "../canvasScripts/raincanvas";
 import { Starcanvas } from "../canvasScripts/starcanvas";
+import { Fireflies } from "../canvasScripts/fireflies";
+import { Snowcanvas } from "../canvasScripts/snowcanvas";
 
 const ViewControls = () => {
   const [isRaining, setIsRaining] = useState(false);
   const [rain, setRain] = useState("");
+  const [snow, setSnow] = useState("");
+  const [isSnowing, setIsSnowing] = useState(false);
   const [justmounted, setJustmounted] = useState(true);
-  //night sky
+  //night sky and fireflies
   useEffect(() => {
-    console.log("stars??");
     var stars = Starcanvas();
     stars.start();
+    var fireflies = Fireflies();
+    fireflies.start();
   }, [justmounted]);
 
-  //initialize rain script
+  //initialize rain/snow script
   useEffect(() => {
     setTimeout(() => {
       if (rain === "") {
         setRain(Raincanvas());
       }
+      if (snow === "") {
+        setSnow(Snowcanvas());
+      }
       setJustmounted(false);
     }, 200);
-  }, [rain, isRaining]);
+  }, [rain, isRaining, snow, isSnowing]);
   //toggle rain
   useEffect(() => {
     if (isRaining) {
@@ -35,6 +43,17 @@ const ViewControls = () => {
       rain.pause();
     } //eslint-disable-next-line
   }, [isRaining]);
+
+  //toggle snow
+  useEffect(() => {
+    console.log("snow");
+    if (isSnowing) {
+      snow.start();
+    } else {
+      if (justmounted) return;
+      snow.pause();
+    } //eslint-disable-next-line
+  }, [isSnowing]);
 
   return (
     <div className="controls">
@@ -69,7 +88,14 @@ const ViewControls = () => {
           />
         </h5>
         <ul>
-          <li className="normal">
+          <li
+            className="normal"
+            onClick={(e) => {
+              e.preventDefault();
+              setIsRaining(false);
+              setIsSnowing(false);
+            }}
+          >
             <button>Normal</button>
           </li>
           <li
@@ -81,7 +107,13 @@ const ViewControls = () => {
           >
             <button>Rain</button>
           </li>
-          <li className="snow">
+          <li
+            className="snow"
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsSnowing(!isSnowing);
+            }}
+          >
             <button>Snow</button>
           </li>
         </ul>
