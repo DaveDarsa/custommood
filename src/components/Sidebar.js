@@ -31,6 +31,9 @@ const Sidebar = () => {
 export default Sidebar;
 
 const StyledSidebar = styled.div`
+  .active {
+    background-color: #6d8eff;
+  }
   position: absolute;
   top: 0;
   left: 0;

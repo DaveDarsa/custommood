@@ -1,7 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+//contexts
+import { PlaylistContext } from "../contexts/PlaylistContextProvider";
+import { CurrentSongcontext } from "../contexts/SongContextProvider";
 //icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock, faCloudSunRain } from "@fortawesome/free-solid-svg-icons";
+import { faCloudSunRain } from "@fortawesome/free-solid-svg-icons";
+
+import { faMusic } from "@fortawesome/free-solid-svg-icons";
 //canvas scripts
 import { Raincanvas } from "../canvasScripts/raincanvas";
 import { Starcanvas } from "../canvasScripts/starcanvas";
@@ -9,6 +14,11 @@ import { Fireflies } from "../canvasScripts/fireflies";
 import { Snowcanvas } from "../canvasScripts/snowcanvas";
 
 const ViewControls = () => {
+  //sidebar controls
+  const [sidebarToggled, setSidebarToggled] = useContext(PlaylistContext);
+  //pausing the player
+  const [, setCurrentSong] = useContext(CurrentSongcontext);
+  //handling canvases
   const [isRaining, setIsRaining] = useState(false);
   const [rain, setRain] = useState("");
   const [snow, setSnow] = useState("");
@@ -57,27 +67,6 @@ const ViewControls = () => {
 
   return (
     <div className="controls">
-      <div className="timecontrols">
-        <h5>
-          Time
-          <FontAwesomeIcon icon={faClock} style={{ marginLeft: ".5rem" }} />
-        </h5>
-        <ul>
-          <li className="sunrise">
-            <button>Sunrise</button>
-          </li>
-          <li className="morning">
-            <button>Morning</button>
-          </li>
-          <li className="midday">
-            <button>Midday</button>
-          </li>
-          <li className="night">
-            <button>Night</button>
-          </li>
-        </ul>
-      </div>
-      <button className="freezetime">Freeze Time</button>
       <div className="weathercontrols">
         <h5>
           Weather
@@ -115,6 +104,41 @@ const ViewControls = () => {
             }}
           >
             <button>Snow</button>
+          </li>
+        </ul>
+      </div>
+      <div className="playercontrols">
+        <h5>
+          Music
+          <FontAwesomeIcon
+            size="1x"
+            icon={faMusic}
+            color="white"
+            style={{ marginLeft: ".5rem" }}
+          />
+        </h5>
+        <ul>
+          <li>
+            <button
+              className="toggler"
+              onClick={(e) => {
+                e.preventDefault();
+                setSidebarToggled(!sidebarToggled);
+              }}
+            >
+              Toggle Player
+            </button>
+          </li>
+          <li>
+            <button
+              className="toggler"
+              onClick={(e) => {
+                e.preventDefault();
+                setCurrentSong("");
+              }}
+            >
+              Pause Player
+            </button>
           </li>
         </ul>
       </div>

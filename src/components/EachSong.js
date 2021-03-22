@@ -2,10 +2,11 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { CurrentSongcontext } from "../contexts/SongContextProvider";
 const EachSong = (props) => {
-  const [, setCurrentSong] = useContext(CurrentSongcontext);
+  const [currentSong, setCurrentSong] = useContext(CurrentSongcontext);
   const { title, channel, thumbnail, src } = props.song;
   return (
     <StyledSong
+      className={currentSong === src ? "active" : ""}
       onClick={() => {
         setCurrentSong(src);
       }}

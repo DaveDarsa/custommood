@@ -39,6 +39,7 @@ export const StyledHeader = styled.header`
   .controls {
     display: flex;
     justify-content: space-around;
+    align-items: baseline;
     ul {
       list-style: none;
       padding: 0 3vw;
@@ -70,12 +71,12 @@ export const StyledHeader = styled.header`
         border-color: #ff4a65;
       }
     }
-    .freezetime {
+    /* .freezetime {
       font-size: 1.5rem;
       color: #abcbe7;
       align-self: center;
-    }
-    .timecontrols {
+    } */
+    /* .timecontrols {
       display: flex;
       flex-basis: 25vw;
       flex-direction: column;
@@ -92,6 +93,28 @@ export const StyledHeader = styled.header`
       }
       .night button {
         color: #7245c9;
+      }
+    } */
+    .playercontrols {
+      .toggler {
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 1rem 1.5rem;
+        text-align: center;
+      }
+      .toggler:hover {
+        cursor: pointer;
+        background-color: #f4f4f4;
+      }
+      .toggler:hover {
+        color: black;
+      }
+      ul {
+        display: flex;
+        justify-content: space-around;
+      }
+      li {
+        margin-right: 2rem;
       }
     }
 

@@ -11,20 +11,3 @@ html {
 svg {
   display: block;
 }
-.sidetoggle {
-  border: 1px solid white;
-  border-radius: 5px;
-  padding: 1rem 2rem;
-  text-align: center;
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  right: 10vw;
-}
-.sidetoggle:hover {
-  cursor: pointer;
-  background-color: #f4f4f4;
-}
-.sidetoggle:hover .musicIcon {
-  color: black;
-}
