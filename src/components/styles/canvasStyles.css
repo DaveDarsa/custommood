@@ -448,6 +448,10 @@
   height: 50px;
   top: 54%;
   left: 60%;
+  user-select: none;
+}
+.cat:hover {
+  cursor: pointer;
 }
 .cat img {
   width: 80px;

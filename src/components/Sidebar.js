@@ -38,7 +38,7 @@ const StyledSidebar = styled.div`
   top: 0;
   left: 0;
   opacity: 0.9;
-  height: 100%;
+  height: 100vh;
   width: 20vw;
   overflow: hidden;
   padding: 2rem 0.5rem;

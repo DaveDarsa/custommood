@@ -2,9 +2,18 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="footer" style={{ fontSize: "5rem" }}>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eveniet illo,
-      cumque et hic, dolor corrupti voluptatum enim reiciendis dolore non
+    <div
+      className="footer"
+      style={{
+        fontSize: "1.5rem",
+        height: "10vh",
+        backgroundColor: "#0A0008",
+        color: "#f4f4f4",
+        textAlign: "center",
+        lineHeight: "10vh",
+      }}
+    >
+      &copy;2020 Designed and Built by Dave Darsa.
     </div>
   );
 };

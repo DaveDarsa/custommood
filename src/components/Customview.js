@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./styles/canvasStyles.css";
 import deer1 from "../images/deer1.svg";
 import deer2 from "../images/deer2.svg";
@@ -7,8 +7,32 @@ import sparkle from "../images/sparkle.svg";
 import owl from "../images/owl.svg";
 import couchImg from "../images/couch.png";
 import kitty from "../images/cat.svg";
-
+import purringsound from "./sounds/sounds_purringsound.mp3";
 const CustomView = () => {
+  const purringRef = useRef();
+  const pettingHandler = (e) => {
+    var increase = setInterval(() => {
+      if (!(purringRef.current.volume > 0.9))
+        purringRef.current.volume += 0.005;
+    }, 200);
+    let playPromise = purringRef.current.play();
+    if (playPromise !== undefined) {
+      playPromise.then(purringRef.current.play());
+    }
+    if (purringRef.current.volume >= 0.9) {
+      clearInterval(increase);
+    }
+  };
+  const stopPetting = () => {
+    var decrease = setInterval(() => {
+      if (!(purringRef.current.volume < 0.1))
+        purringRef.current.volume -= 0.005;
+    }, 200);
+    purringRef.current.pause();
+    if (purringRef.current.volume <= 0.1) {
+      clearInterval(decrease);
+    }
+  };
   return (
     <>
       <div className="container" id="animcontainer">
@@ -1031,7 +1055,8 @@ const CustomView = () => {
       <div class="couch">
         <img src={couchImg} alt="" />
       </div>
-      <div class="cat">
+      <div class="cat" onMouseOver={pettingHandler} onMouseLeave={stopPetting}>
+        <audio src={purringsound} ref={purringRef}></audio>
         <img src={kitty} alt="" />
         <div class="tail">
           <div class="tail-segment">

@@ -6,7 +6,6 @@ const Header = () => {
   return (
     <StyledHeader className="header">
       <h1 className="title">Custom Mood</h1>
-
       <div className="landscapecontrols">
         <h4>Landscape Controls</h4>
         <ViewControls />

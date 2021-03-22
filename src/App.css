@@ -3,11 +3,25 @@ body {
   margin: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  background-color: #0a0008;
 }
 html {
+  padding: 0;
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
 }
 svg {
   display: block;
+}
+.App {
+  min-height: 100vh;
+}
+::-webkit-scrollbar {
+  width: 0.5vw;
+}
+::-webkit-scrollbar-track {
+  background-color: #f4d3d1;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #6d141b;
 }
