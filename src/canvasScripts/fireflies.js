@@ -64,7 +64,6 @@ export const Fireflies = function fireflies() {
     for (let i = 0; i < 50; i++) {
       fireflies.push(new firefly());
     }
-    console.log(fireflies);
   }
 
   window.addEventListener("resize", () => {

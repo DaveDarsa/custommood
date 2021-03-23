@@ -1,29 +1,53 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 //contexts
 import { PlaylistContext } from "../contexts/PlaylistContextProvider";
 import { CurrentSongcontext } from "../contexts/SongContextProvider";
 //icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudSunRain } from "@fortawesome/free-solid-svg-icons";
-
 import { faMusic } from "@fortawesome/free-solid-svg-icons";
+//audio imports
+import day from "./sounds/DAYSOUNDbetter.mp3";
+import night from "./sounds/NIGHTSOUND.mp3";
+import rainsound from "./sounds/RAINSOUND.mp3";
 //canvas scripts
 import { Raincanvas } from "../canvasScripts/raincanvas";
 import { Starcanvas } from "../canvasScripts/starcanvas";
 import { Fireflies } from "../canvasScripts/fireflies";
 import { Snowcanvas } from "../canvasScripts/snowcanvas";
+//util
+import { useInterval } from "../utils/useInterval";
 
 const ViewControls = () => {
   //sidebar controls
   const [sidebarToggled, setSidebarToggled] = useContext(PlaylistContext);
   //pausing the player
   const [, setCurrentSong] = useContext(CurrentSongcontext);
+  //daytime for sounds
+  const [daytime, setDaytime] = useState(true);
+
+  //audio refs
+  const daysoundref = useRef();
+  const nightsoundref = useRef();
+  const rainsoundref = useRef();
+
+  useInterval(() => {
+    setDaytime(!daytime);
+  }, 75000);
+  useEffect(() => {
+    if (daytime) {
+      daysoundref.current.play();
+    } else {
+      nightsoundref.current.play();
+    }
+  }, [daytime]);
   //handling canvases
   const [isRaining, setIsRaining] = useState(false);
   const [rain, setRain] = useState("");
   const [snow, setSnow] = useState("");
   const [isSnowing, setIsSnowing] = useState(false);
   const [justmounted, setJustmounted] = useState(true);
+
   //night sky and fireflies
   useEffect(() => {
     var stars = Starcanvas();
@@ -48,9 +72,11 @@ const ViewControls = () => {
   useEffect(() => {
     if (isRaining) {
       rain.start();
+      rainsoundref.current.play();
     } else {
       if (justmounted) return;
       rain.pause();
+      rainsoundref.current.pause();
     } //eslint-disable-next-line
   }, [isRaining]);
 
@@ -142,6 +168,9 @@ const ViewControls = () => {
           </li>
         </ul>
       </div>
+      <audio src={day} ref={daysoundref}></audio>
+      <audio src={night} ref={nightsoundref}></audio>
+      <audio src={rainsound} ref={rainsoundref}></audio>
     </div>
   );
 };
