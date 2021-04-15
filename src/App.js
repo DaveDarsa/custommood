@@ -56,10 +56,10 @@ function App() {
       let soundToPlay = daytime ? daysoundref : nightsoundref;
       soundToPlay.current.play();
     } else {
-      // daysoundref.current.pause();
-      // daysoundref.current.currentTime = 0;
-      // nightsoundref.current.pause();
-      // nightsoundref.current.currentTime = 0;
+      daysoundref.current.pause();
+      daysoundref.current.currentTime = 0;
+      nightsoundref.current.pause();
+      nightsoundref.current.currentTime = 0;
     }
   }, [ambiance, daytime]);
 
