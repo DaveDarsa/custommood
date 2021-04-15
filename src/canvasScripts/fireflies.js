@@ -4,7 +4,7 @@ export const Fireflies = function fireflies() {
   var ctx = canvas.getContext("2d");
   canvas.height = container.offsetHeight;
   canvas.width = container.offsetWidth;
-
+  let small = false;
   let day = false;
   let fireflies = [];
   function randomFromRange(min, max) {
@@ -35,7 +35,12 @@ export const Fireflies = function fireflies() {
       ctx.shadowColor = "rgb(95,201,33)";
       ctx.shadowBlur = 15;
       ctx.beginPath();
-      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+      if (small) {
+        ctx.shadowBlur = 2;
+        ctx.arc(this.x, this.y, this.radius / 4, 0, Math.PI * 2, false);
+      } else {
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+      }
       ctx.fill();
     };
     firefly.prototype.update = function () {
@@ -69,6 +74,9 @@ export const Fireflies = function fireflies() {
   window.addEventListener("resize", () => {
     canvas.height = container.offsetHeight;
     canvas.width = container.offsetWidth;
+    if (container.offsetWidth < 400) {
+      small = true;
+    }
     init();
   });
   function animate() {
@@ -86,6 +94,9 @@ export const Fireflies = function fireflies() {
     init();
     canvas.height = container.offsetHeight;
     canvas.width = container.offsetWidth;
+    if (container.offsetWidth < 400) {
+      small = true;
+    }
     requestAnimationFrame(animate);
   }
   setInterval(() => {

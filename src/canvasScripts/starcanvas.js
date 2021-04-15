@@ -6,7 +6,7 @@ export const Starcanvas = function starcanvas() {
   canvas.width = container.offsetWidth;
   let paused = true;
   let day = true;
-
+  let small = false;
   function star() {
     this.x = Math.random() * canvas.width;
     this.y = Math.random() * canvas.height;
@@ -15,7 +15,11 @@ export const Starcanvas = function starcanvas() {
     star.prototype.draw = function () {
       ctx.fillStyle = "rgba(255,255,255,.8)";
       ctx.beginPath();
-      ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+      if (small) {
+        ctx.arc(this.x, this.y, this.r / 3, 0, 2 * Math.PI, false);
+      } else {
+        ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+      }
       ctx.fill();
     };
     star.prototype.update = function () {
@@ -91,6 +95,9 @@ export const Starcanvas = function starcanvas() {
   window.addEventListener("resize", () => {
     canvas.height = container.offsetHeight;
     canvas.width = container.offsetWidth;
+    if (container.offsetWidth < 400) {
+      small = true;
+    }
 
     init();
   });
@@ -116,6 +123,10 @@ export const Starcanvas = function starcanvas() {
     init();
     canvas.height = container.offsetHeight;
     canvas.width = container.offsetWidth;
+    if (container.offsetWidth < 400) {
+      small = true;
+    }
+
     requestAnimationFrame(animate);
   }
 

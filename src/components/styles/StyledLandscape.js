@@ -8,4 +8,14 @@ export const StyledLandscape = styled.div`
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
+
+  /* @media screen and (max-width: 500px) {
+    > & {
+      zoom: 0.5;
+    }
+  } */
+  @media screen and (max-width: 811px) {
+    background-size: contain;
+    background-position: center top;
+  }
 `;

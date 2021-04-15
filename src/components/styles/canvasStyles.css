@@ -1,17 +1,119 @@
 .container {
   position: absolute;
-  top: 33vh;
+  top: 38vh;
   left: 50.67%;
   transform: translate(-50%, -50%) scale(0.81) scaleY(1.1);
   width: 49vw;
-  height: 50vh;
-
+  height: 500px;
+  max-height: 28vw;
   overflow: hidden;
 }
+
+@media screen and (max-width: 1600px) {
+  html {
+    font-size: 50% !important;
+  }
+  .container {
+    max-height: 26vw !important;
+  }
+  .window {
+    top: 10vh !important;
+    left: 21% !important;
+    width: 60vw !important;
+  }
+
+  .cat {
+    top: 45vh !important;
+  }
+}
+
+@media screen and (max-width: 811px) {
+  html {
+    font-size: 25% !important;
+  }
+  .songcontainer {
+    width: 30vw !important;
+    transform: translateX();
+  }
+  .container {
+    max-height: 28vw !important;
+    top: 18vh !important;
+  }
+  .window {
+    top: 6.8vh !important;
+    left: 20% !important;
+    width: 62vw !important;
+  }
+  .couch {
+    top: 20vh !important;
+  }
+  .cat {
+    top: 20vh !important;
+    transform: scale(0.6);
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .container {
+    max-height: 28vw !important;
+    top: 11vh !important;
+  }
+  .owl {
+    transform: scale(0.4) translate(-5rem, -5rem);
+  }
+
+  .window {
+    top: 4.2vh !important;
+    left: 20% !important;
+    width: 62vw !important;
+  }
+  .couch {
+    top: 12vh !important;
+  }
+  .cat {
+    top: 9vh !important;
+    transform: scale(0.4) translateX(-10rem);
+  }
+}
+
+@media screen and (max-width: 384px) {
+  .container {
+    max-height: 28vw !important;
+    top: 10.5vh !important;
+  }
+
+  .window {
+    top: 4.3vh !important;
+    left: 20% !important;
+    width: 62vw !important;
+  }
+  .couch {
+    top: 11vh !important;
+  }
+  .cat {
+    top: 8vh !important;
+    transform: scale(0.4) translateX(-10rem);
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .container {
+    max-height: 28vw !important;
+    top: 12vh !important;
+  }
+  .couch {
+    top: 13.5vh !important;
+  }
+  .cat {
+    top: 10vh !important;
+    transform: translateX(-8rem) scale(0.3);
+  }
+}
+
 .window {
   position: absolute;
   width: 60vw;
-  top: 6vh;
+  top: 11vh;
   left: 21%;
   transform: scaleY(0.91);
 }
@@ -20,7 +122,7 @@
 }
 .couch {
   position: absolute;
-  top: 39.2vh;
+  top: 43.2vh;
   left: 55.13vw;
   display: inline-block;
 }
@@ -38,7 +140,9 @@
   opacity: 1;
   z-index: 1;
 }
-
+.backgroundgradient svg {
+  height: 100%;
+}
 .mountain {
   position: absolute;
   top: 50.9%;

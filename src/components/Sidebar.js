@@ -9,7 +9,7 @@ const Sidebar = () => {
   const [, , musicList] = useContext(PlaylistContext);
 
   return (
-    <StyledSidebar toggled={sidebarToggled}>
+    <StyledSidebar className="songcontainer" toggled={sidebarToggled}>
       <span
         onClick={(e) => {
           e.preventDefault();
@@ -42,10 +42,11 @@ const StyledSidebar = styled.div`
   width: 20vw;
   overflow: hidden;
   padding: 2rem 0.5rem;
+
   z-index: 1000;
   transition: 0.3s ease-out;
   transform: ${(props) => {
-    return props.toggled ? "translateX(0)" : "translateX(-20vw)";
+    return props.toggled ? "translateX(0)" : "translateX(-30vw)";
   }};
   box-sizing: border-box;
   background-color: #f4f4f4;

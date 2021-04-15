@@ -34,7 +34,7 @@ const CustomView = () => {
     }
   };
   return (
-    <>
+    <div className="containerwrap" style={{ marginBottom: "5rem" }}>
       <div className="container" id="animcontainer">
         <div className="mountain">
           <svg
@@ -1100,7 +1100,7 @@ const CustomView = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default CustomView;
