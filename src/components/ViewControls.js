@@ -6,41 +6,24 @@ import { CurrentSongcontext } from "../contexts/SongContextProvider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudSunRain } from "@fortawesome/free-solid-svg-icons";
 import { faMusic } from "@fortawesome/free-solid-svg-icons";
-//audio imports
-import day from "./sounds/DAYSOUNDbetter.mp3";
-import night from "./sounds/NIGHTSOUND.mp3";
+//audio
+
 import rainsound from "./sounds/RAINSOUND.mp3";
+
 //canvas scripts
 import { Raincanvas } from "../canvasScripts/raincanvas";
 import { Starcanvas } from "../canvasScripts/starcanvas";
 import { Fireflies } from "../canvasScripts/fireflies";
 import { Snowcanvas } from "../canvasScripts/snowcanvas";
-//util
-import { useInterval } from "../utils/useInterval";
 
-const ViewControls = () => {
+const ViewControls = ({ ambiance, setAmbiance }) => {
   //sidebar controls
   const [sidebarToggled, setSidebarToggled] = useContext(PlaylistContext);
   //pausing the player
   const [, setCurrentSong] = useContext(CurrentSongcontext);
-  //daytime for sounds
-  const [daytime, setDaytime] = useState(true);
 
-  //audio refs
-  const daysoundref = useRef();
-  const nightsoundref = useRef();
   const rainsoundref = useRef();
 
-  useInterval(() => {
-    setDaytime(!daytime);
-  }, 75000);
-  useEffect(() => {
-    if (daytime) {
-      daysoundref.current.play();
-    } else {
-      nightsoundref.current.play();
-    }
-  }, [daytime]);
   //handling canvases
   const [isRaining, setIsRaining] = useState(false);
   const [rain, setRain] = useState("");
@@ -133,6 +116,15 @@ const ViewControls = () => {
           </li>
         </ul>
       </div>
+      <div
+        className="ambiance"
+        onClick={(e) => {
+          e.stopPropagation();
+          setAmbiance(!ambiance);
+        }}
+      >
+        {ambiance ? "Pause" : "Play"} Ambiance
+      </div>
       <div className="playercontrols">
         <h5>
           Music
@@ -168,8 +160,6 @@ const ViewControls = () => {
           </li>
         </ul>
       </div>
-      <audio src={day} ref={daysoundref}></audio>
-      <audio src={night} ref={nightsoundref}></audio>
       <audio src={rainsound} ref={rainsoundref}></audio>
     </div>
   );

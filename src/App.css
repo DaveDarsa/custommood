@@ -25,3 +25,21 @@ svg {
 ::-webkit-scrollbar-thumb {
   background-color: #6d141b;
 }
+
+.ambiance {
+  border: 1px solid #fff;
+  align-self: baseline;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+  /* transform: translateX(-1vw); */
+  position: absolute;
+  top: 60%;
+  transition: all 0.3s ease;
+  margin-left: 1rem;
+}
+.ambiance:hover {
+  background-color: #fff;
+  color: black;
+}
