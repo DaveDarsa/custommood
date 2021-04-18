@@ -74,8 +74,10 @@ export const Fireflies = function fireflies() {
   window.addEventListener("resize", () => {
     canvas.height = container.offsetHeight;
     canvas.width = container.offsetWidth;
-    if (container.offsetWidth < 400) {
+    if (document.documentElement.clientWidth < 1000) {
       small = true;
+    } else {
+      small = false;
     }
     init();
   });
@@ -94,8 +96,10 @@ export const Fireflies = function fireflies() {
     init();
     canvas.height = container.offsetHeight;
     canvas.width = container.offsetWidth;
-    if (container.offsetWidth < 400) {
+    if (document.documentElement.clientWidth < 1000) {
       small = true;
+    } else {
+      small = false;
     }
     requestAnimationFrame(animate);
   }

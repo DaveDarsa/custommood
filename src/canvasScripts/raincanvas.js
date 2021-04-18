@@ -6,6 +6,7 @@ export const Raincanvas = function () {
   var ctx = canvas.getContext("2d");
   var firstRun = true;
   var animID;
+  let small = false;
   function splash(x, y) {
     this.x = x;
     this.y = y + 2;
@@ -21,7 +22,11 @@ export const Raincanvas = function () {
       ctx.fillStyle = "rgba(255,255,255,.35)";
       ctx.fillStyle = "rgba(147, 176, 204,.4)";
       ctx.beginPath();
-      ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+      if (small) {
+        ctx.arc(this.x, this.y, this.r / 3, 0, 2 * Math.PI, false);
+      } else {
+        ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+      }
       ctx.fill();
     };
     splash.prototype.update = function () {
@@ -52,7 +57,11 @@ export const Raincanvas = function () {
       ctx.fillStyle = "rgba(143, 190, 235,.8)";
       ctx.beginPath();
       ctx.moveTo(this.x, this.y);
-      ctx.lineWidth = 1.5;
+      if (small) {
+        ctx.lineWidth = 1;
+      } else {
+        ctx.lineWidth = 1.5;
+      }
       ctx.lineTo(this.x - this.height, this.y + this.height);
       ctx.stroke();
     };
@@ -83,14 +92,22 @@ export const Raincanvas = function () {
     //create and add rain elements customized;
     rain = [];
     splashes = [];
-    for (let i = 0; i < 80; i++) {
+    var max = !small ? 80 : 30;
+    for (let i = 0; i < max; i++) {
       rain.push(new drop(i));
     }
   }
   //resize
   window.addEventListener("resize", () => {
+    rain = [];
+    splashes = [];
     canvas.height = container.offsetHeight;
     canvas.width = container.offsetWidth;
+    if (document.documentElement.clientWidth < 1000) {
+      small = true;
+    } else {
+      small = false;
+    }
     init();
   });
 
@@ -115,6 +132,11 @@ export const Raincanvas = function () {
   }
 
   function start() {
+    if (document.documentElement.clientWidth < 1000) {
+      small = true;
+    } else {
+      small = false;
+    }
     init();
     animID = requestAnimationFrame(animate);
   }

@@ -5,7 +5,10 @@ import CustomView from "./Customview";
 const Landscape = () => {
   return (
     <StyledLandscape bgimg={bgimage}>
-      <CustomView />
+      <div className="landscapewrap">
+        <CustomView />
+        <img className="bg" src={bgimage} alt="" />
+      </div>
     </StyledLandscape>
   );
 };

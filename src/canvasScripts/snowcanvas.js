@@ -5,6 +5,7 @@ export const Snowcanvas = function () {
   canvas.height = container.offsetHeight;
   canvas.width = container.offsetWidth;
   var animID;
+  let small = false;
   let firstRun = true;
   function snowflake() {
     this.x = Math.random() * (canvas.width - 10);
@@ -17,7 +18,12 @@ export const Snowcanvas = function () {
     snowflake.prototype.draw = function () {
       ctx.fillStyle = "rgba(250,250,250)";
       ctx.beginPath();
-      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+      if (small) {
+        ctx.arc(this.x, this.y, this.radius / 3, 0, Math.PI * 2, false);
+      } else {
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+      }
+
       ctx.fill();
     };
     snowflake.prototype.update = function () {
@@ -39,10 +45,14 @@ export const Snowcanvas = function () {
     }
   }
   window.addEventListener("resize", () => {
-    init();
-    console.log("snow?");
     canvas.height = container.offsetHeight;
     canvas.width = container.offsetWidth;
+    if (document.documentElement.clientWidth < 1000) {
+      small = true;
+    } else {
+      small = false;
+    }
+    init();
   });
   function animate() {
     if (!animID) {
@@ -59,6 +69,11 @@ export const Snowcanvas = function () {
 
   function start() {
     init();
+    if (document.documentElement.clientWidth < 1000) {
+      small = true;
+    } else {
+      small = false;
+    }
     animID = requestAnimationFrame(animate);
   }
 

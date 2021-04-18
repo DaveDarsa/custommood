@@ -1,4 +1,4 @@
-.container {
+/* .container {
   position: absolute;
   top: 38vh;
   left: 50.67%;
@@ -7,128 +7,149 @@
   height: 500px;
   max-height: 28vw;
   overflow: hidden;
-}
+} */
 
 @media screen and (max-width: 1600px) {
   html {
     font-size: 50% !important;
   }
-  .container {
-    max-height: 26vw !important;
-  }
-  .window {
-    top: 10vh !important;
-    left: 21% !important;
-    width: 60vw !important;
-  }
-
-  .cat {
-    top: 45vh !important;
+  .tail-segment {
+    left: 7px !important;
   }
 }
-
-@media screen and (max-width: 811px) {
+@media screen and (max-width: 1200px) {
   html {
-    font-size: 25% !important;
+    font-size: 40% !important;
   }
-  .songcontainer {
-    width: 30vw !important;
-    transform: translateX();
+  .tail {
+    left: 0.2rem !important;
   }
-  .container {
-    max-height: 28vw !important;
-    top: 18vh !important;
+  .tail-segment {
+    transform: scale(0.3) !important;
+    height: 1rem !important;
+    width: 5px !important;
+    left: 4px !important;
   }
-  .window {
-    top: 6.8vh !important;
-    left: 20% !important;
-    width: 62vw !important;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 20% !important;
   }
-  .couch {
-    top: 20vh !important;
+  .landscapecontrols {
+    width: 90vw !important;
   }
-  .cat {
-    top: 20vh !important;
-    transform: scale(0.6);
+  .tail-segment {
+    left: 2px !important;
+    box-shadow: none !important;
+  }
+  .tail {
+    left: 1rem !important;
   }
 }
 
-@media screen and (max-width: 428px) {
-  .container {
-    max-height: 28vw !important;
-    top: 11vh !important;
-  }
-  .owl {
-    transform: scale(0.4) translate(-5rem, -5rem);
-  }
-
-  .window {
-    top: 4.2vh !important;
-    left: 20% !important;
-    width: 62vw !important;
-  }
-  .couch {
-    top: 12vh !important;
-  }
-  .cat {
-    top: 9vh !important;
-    transform: scale(0.4) translateX(-10rem);
+@media screen and (max-width: 768px) {
+  .tail {
+    left: -1rem !important;
   }
 }
 
-@media screen and (max-width: 384px) {
-  .container {
-    max-height: 28vw !important;
-    top: 10.5vh !important;
-  }
-
-  .window {
-    top: 4.3vh !important;
-    left: 20% !important;
-    width: 62vw !important;
-  }
-  .couch {
-    top: 11vh !important;
-  }
-  .cat {
-    top: 8vh !important;
-    transform: scale(0.4) translateX(-10rem);
-  }
+.ambiance {
+  border: 1px solid #fff;
+  align-self: baseline;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+  /* transform: translateX(-1vw); */
+  position: absolute;
+  top: 60%;
+  transition: all 0.3s ease;
+  margin-left: 1rem;
+}
+.ambiance:hover {
+  background-color: #fff;
+  color: black;
 }
 
-@media screen and (max-width: 360px) {
-  .container {
-    max-height: 28vw !important;
-    top: 12vh !important;
-  }
-  .couch {
-    top: 13.5vh !important;
-  }
-  .cat {
-    top: 10vh !important;
-    transform: translateX(-8rem) scale(0.3);
-  }
+.containerwrap {
+  z-index: 2;
+  position: relative;
+  top: 1.3vw;
+  width: 43vw;
+  left: 52%;
+  transform: translateX(-50%) scaleX(0.9) scaleY(0.93);
+  height: 500px;
+  /* overflow: hidden; */
+  max-height: 25vw;
+  margin: 0;
+}
+.filler {
+  height: 0;
+}
+.container {
+  padding: 0;
+  position: absolute;
+  height: 500px;
+  max-height: 25vw;
+  width: 43vw;
+  overflow: hidden;
 }
 
 .window {
   position: absolute;
-  width: 60vw;
-  top: 11vh;
-  left: 21%;
-  transform: scaleY(0.91);
+  width: 49vw;
+  z-index: 400;
+  bottom: 1vw;
+  left: -3vw;
+  display: inline-block;
 }
 .window svg {
   width: 100%;
+  transform: scale(1.3, 1.2);
+  transform-origin: center;
 }
 .couch {
   position: absolute;
-  top: 43.2vh;
-  left: 55.13vw;
+  top: 15.5vw;
+  right: -17.8vw;
+  z-index: 500;
   display: inline-block;
 }
 .couch img {
-  width: 32.2vw;
+  width: 35vw;
   display: inline-block;
+}
+.cat {
+  position: absolute;
+  bottom: 8.5vw;
+  right: 10vw;
+  user-select: none;
+}
+.cat:hover {
+  cursor: pointer;
+}
+.cat img {
+  width: 4.8vw;
+  position: absolute;
+  display: block;
+  z-index: 600;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+}
+.landscapewrap {
+  position: relative;
+  padding: 10vw;
+  background-color: #0a0008;
+}
+.bg {
+  z-index: 1;
+  top: -1vw;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: block;
+  object-fit: contain;
 }
 
 .backgroundgradient {
@@ -328,7 +349,7 @@
   position: absolute;
   z-index: 300;
   width: 165%;
-  bottom: -20%;
+  bottom: -25%;
   right: -104%;
   transform: scaleX(-1) scale(0.7);
 }
@@ -336,7 +357,7 @@
   position: absolute;
   z-index: 300;
   width: 100%;
-  bottom: -15%;
+  bottom: -18%;
   left: -62.4%;
   transform: scale(0.9);
 }
@@ -523,30 +544,16 @@
   z-index: 350;
 }
 
-.tail {
-  position: absolute;
-  top: 10;
-  left: 0;
-  z-index: 400;
-  width: 20px;
-  height: 20px;
-  background-color: black;
-  text-align: center;
-}
-.tail * {
-  transform: rotate(90deg);
-}
-.tail-segment {
-  background-color: #000000;
+/* .tail-segment {
   position: absolute;
   height: 20px;
   border-radius: 25px;
-  top: 0;
+  top: 0rem;
   left: 50;
   transform: rotate(-10deg);
   animation: tail-swish 5s infinite cubic-bezier(0.8, 0, 0.2, 1);
-}
-.cat {
+} */
+/* .cat {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -564,12 +571,20 @@
   z-index: 500;
   left: 50%;
   transform: translateX(-50%);
-}
+} */
 .tail {
-  left: 30%;
-  top: 250%;
+  z-index: 800;
+  top: 7.5vw;
+  left: -0.8rem;
+  background-color: black;
+  text-align: center;
+  position: absolute;
   transform: rotate(90deg);
   -webkit-font-smoothing: antialiased;
+}
+
+.tail * {
+  transform: rotate(90deg);
 }
 
 .tail-segment {
@@ -577,7 +592,7 @@
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  height: 15px;
+  height: 1.2rem;
   width: 20px;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 235px;
@@ -751,13 +766,13 @@
   opacity: 0;
   position: absolute;
   z-index: 200;
-  top: 32%;
+  top: 42%;
   left: 29%;
   width: 25px;
   animation: owlanim ease-in-out 150s infinite;
   animation-delay: 75s;
 }
 .owl img {
-  width: 100%;
+  width: 2rem;
   display: block;
 }

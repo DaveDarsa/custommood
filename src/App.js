@@ -1,4 +1,4 @@
-import React, { useRef, useState, useLayoutEffect, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 //importing components
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
