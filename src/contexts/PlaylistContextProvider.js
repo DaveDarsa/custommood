@@ -11,11 +11,10 @@ export const PlaylistContextProvider = (props) => {
   }
   const [musicList, setMusicList] = useState("");
   //live video ids
-  var liveIds = ["5qap5aO4i9A", "5yx6BWlEVcY", "-5KAN9_CzSA", "7NOSDKb0HlU"];
+  var liveIds = ["jfKfPfyJRdk", "5yx6BWlEVcY", "7NOSDKb0HlU", "4xDzrJKXOOY"];
 
   //fetch all video details and update the musiclist
   useEffect(() => {
-    console.log("ran");
     async function getData() {
       let info = await Promise.all(
         liveIds.map((id) => {
@@ -25,7 +24,7 @@ export const PlaylistContextProvider = (props) => {
         return details;
       });
       info = info.map((_, idx) => {
-        return info[idx].data.items[0].snippet;
+        return info[idx]?.data?.items[0]?.snippet;
       });
       //gotta have 1.thumbnail 2.title 3.channel name 4.src
       info = info.map((eachVid, idx) => {

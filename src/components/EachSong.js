@@ -31,10 +31,9 @@ const StyledSong = styled.div`
   width: 100%;
   margin-bottom: 5rem;
   padding: 0 1rem;
-  transition: 0.5s ease;
   :hover {
     cursor: pointer;
-    background-color: #d3ddff;
+
   }
 
   .details {

@@ -4,7 +4,7 @@ import bgimage from "../images/background.png";
 import CustomView from "./Customview";
 const Landscape = () => {
   return (
-    <StyledLandscape bgimg={bgimage}>
+    <StyledLandscape $bgimg={bgimage}>
       <div className="landscapewrap">
         <CustomView />
         <img className="bg" src={bgimage} alt="" />

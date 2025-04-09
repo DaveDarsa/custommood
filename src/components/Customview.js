@@ -84,7 +84,7 @@ const CustomView = () => {
                 y2="577.749"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#BF63D3">
+                <stop stopColor="#BF63D3">
                   <animate
                     attributeName="stop-color"
                     values="#BF63D3;#FFE4D9;#FFE4D9;#FFFFFF;#FFFFFF;#632B6F;#632B6F;#632B6F;#632B6F;#632B6F;#632B6F;#BF63D3;"
@@ -92,7 +92,7 @@ const CustomView = () => {
                     repeatCount="indefinite"
                   />
                 </stop>
-                <stop offset="1" stop-color="#B1A4CC">
+                <stop offset="1" stopColor="#B1A4CC">
                   <animate
                     attributeName="stop-color"
                     values="#B1A4CC;#A29BC6;#A29BC6;#525498;#525498;#38324D;#38324D;#38324D;#38324D;#38324D;#38324D;#B1A4CC;"
@@ -109,7 +109,7 @@ const CustomView = () => {
                 y2="563.878"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#A871B5">
+                <stop stopColor="#A871B5">
                   <animate
                     attributeName="stop-color"
                     values="#A871B5;#A29AC5;#A29AC5;#88D4DF;#88D4DF;#53265E;#53265E;#53265E;#53265E;#53265E;#53265E;#A871B5;"
@@ -117,7 +117,7 @@ const CustomView = () => {
                     repeatCount="indefinite"
                   />
                 </stop>
-                <stop offset="1" stop-color="#6157A0">
+                <stop offset="1" stopColor="#6157A0">
                   <animate
                     attributeName="stop-color"
                     values="#6157A0;#A29CC6;#A29CC6;#474071;#474071;#201A41;#201A41;#201A41;#201A41;#201A41;#201A41;#6157A0;"
@@ -145,7 +145,7 @@ const CustomView = () => {
                 y2="2873"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#9C75C6">
+                <stop stopColor="#9C75C6">
                   <animate
                     attributeName="stop-color"
                     values="#9C75C6;#FFD9CC;#FFD9CC;#35D6ED;#35D6ED;#292369;#292369;#292369;#292369;#292369;#292369;#9C75C6;"
@@ -153,7 +153,7 @@ const CustomView = () => {
                     repeatCount="indefinite"
                   />
                 </stop>
-                <stop offset="0.302083" stop-color="#C999E5">
+                <stop offset="0.302083" stopColor="#C999E5">
                   <animate
                     attributeName="stop-color"
                     values="#C999E5;#FFEBDA;#FFEBDA;#65DDEF;#65DDEF;#412683;#412683;#412683;#412683;#412683;#412683;#C999E5;"
@@ -161,7 +161,7 @@ const CustomView = () => {
                     repeatCount="indefinite"
                   />
                 </stop>
-                <stop offset="1" stop-color="#FEEBF8">
+                <stop offset="1" stopColor="#FEEBF8">
                   <animate
                     attributeName="stop-color"
                     values="#FEEBF8;#FFFFFE;#FFFFFE;#C9F6FF;#C9F6FF;#882F7F;#882F7F;#882F7F;#882F7F;#882F7F;#882F7F;#FEEBF8"
@@ -231,7 +231,7 @@ const CustomView = () => {
                 y2="110.939"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#532E61">
+                <stop stopColor="#532E61">
                   <animate
                     attributeName="stop-color"
                     values="#532E61;#54414A;#54414A;#092644;#092644;#110E33;#110E33;#110E33;#110E33;#110E33;#110E33;#532E61;"
@@ -239,7 +239,7 @@ const CustomView = () => {
                     repeatCount="indefinite"
                   />
                 </stop>
-                <stop offset="1" stop-color="#3C2943">
+                <stop offset="1" stopColor="#3C2943">
                   <animate
                     attributeName="stop-color"
                     values="#3C2943;#6C5A63;#6C5A63;#114446;#114446;#121532;#121532;#121532;#121532;#121532;#121532;#3C2943;"
@@ -271,7 +271,7 @@ const CustomView = () => {
                 y2="143.199"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#4a2957">
+                <stop stopColor="#4a2957">
                   <animate
                     attributeName="stop-color"
                     values="#4a2957;#4c3a42;#4c3a42;#071e36;#071e36;#0d0b27;#0d0b27;#0d0b27;#0d0b27;#0d0b27;#0d0b27;#4a2957;"
@@ -279,7 +279,7 @@ const CustomView = () => {
                     repeatCount="indefinite"
                   />
                 </stop>
-                <stop offset="1" stop-color="#3c2645">
+                <stop offset="1" stopColor="#3c2645">
                   <animate
                     attributeName="stop-color"
                     values="#3c2645;#64535b;#64535b;#0e3839;#0e3839;#0e1027;#0e1027;#0e1027;#0e1027;#0e1027;#0e1027;#3c2645;"
@@ -311,7 +311,7 @@ const CustomView = () => {
                 y2="143.199"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#442650">
+                <stop stopColor="#442650">
                   <animate
                     attributeName="stop-color"
                     values="#442650;#46363D;#46363D;#06192D;#06192D;#0A091F;#0A091F;#0A091F;#0A091F;#0A091F;#0A091F;#442650;"
@@ -319,7 +319,7 @@ const CustomView = () => {
                     repeatCount="indefinite"
                   />
                 </stop>
-                <stop offset="1" stop-color="#36223E">
+                <stop offset="1" stopColor="#36223E">
                   <animate
                     attributeName="stop-color"
                     values="#36223E;#5E4E56;#5E4E56;#0C3031;#0C3031;#0B0D1F;#0B0D1F;#0B0D1F;#0B0D1F;#0B0D1F;#0B0D1F;#36223E;"
@@ -351,7 +351,7 @@ const CustomView = () => {
                 y2="143.199"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#442650">
+                <stop stopColor="#442650">
                   <animate
                     attributeName="stop-color"
                     values="#442650;#46363D;#46363D;#06192D;#06192D;#0A091F;#0A091F;#0A091F;#0A091F;#0A091F;#0A091F;#442650;"
@@ -359,7 +359,7 @@ const CustomView = () => {
                     repeatCount="indefinite"
                   />
                 </stop>
-                <stop offset="1" stop-color="#36223E">
+                <stop offset="1" stopColor="#36223E">
                   <animate
                     attributeName="stop-color"
                     values="#36223E;#5E4E56;#5E4E56;#0C3031;#0C3031;#0B0D1F;#0B0D1F;#0B0D1F;#0B0D1F;#0B0D1F;#0B0D1F;#36223E;"
@@ -391,7 +391,7 @@ const CustomView = () => {
                 y2="313.556"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#9e60ac">
+                <stop stopColor="#9e60ac">
                   <animate
                     attributeName="stop-color"
                     values="#9e60ac;#938abc;#938abc;#74cdda;#74cdda;#33173a;#33173a;#33173a;#33173a;#33173a;#33173a;#9e60ac;"
@@ -400,7 +400,7 @@ const CustomView = () => {
                   />
                 </stop>
 
-                <stop offset="1" stop-color="#574e8f">
+                <stop offset="1" stopColor="#574e8f">
                   <animate
                     attributeName="stop-color"
                     values="#574e8f;#938cbd;#938cbd;#3d3761;#3d3761;#0e0b1d;#0e0b1d;#0e0b1d;#0e0b1d;#0e0b1d;#0e0b1d;#574e8f;"
@@ -432,7 +432,7 @@ const CustomView = () => {
                 y2="-60.9989"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop offset="0.0185974" stop-color="#361f3b">
+                <stop offset="0.0185974" stopColor="#361f3b">
                   <animate
                     attributeName="stop-color"
                     values="#361f3b;#3d365d;#3d365d;#216f7a;#216f7a;#231028;#231028;#231028;#231028;#231028;#231028;#361f3b;"
@@ -440,7 +440,7 @@ const CustomView = () => {
                     repeatCount="indefinite"
                   />
                 </stop>
-                <stop offset="1" stop-color="#39335e">
+                <stop offset="1" stopColor="#39335e">
                   <animate
                     attributeName="stop-color"
                     values="#39335e;#5b5390;#5b5390;#2B2551;#2B2551;#17132f;#17132f;#17132f;#17132f;#17132f;#17132f;#39335e;"
@@ -472,7 +472,7 @@ const CustomView = () => {
                 y2="332.717"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop offset="0.1" stop-color="#062711">
+                <stop offset="0.1" stopColor="#062711">
                   <animate
                     attributeName="stop-color"
                     values="#062711;#041E0D;#041E0D;#033113;#033113;#01200C;#01200C;#01200C;#01200C;#01200C;#01200C;#062711;"
@@ -480,7 +480,7 @@ const CustomView = () => {
                     repeatCount="indefinite"
                   />
                 </stop>
-                <stop offset="0.97" stop-color="#2A223A" stopOpacity="1">
+                <stop offset="0.97" stopColor="#2A223A" stopOpacity="1">
                   <animate
                     attributeName="stop-color"
                     values="#2A223A;#3C375F;#3C375F;#182B3E;#182B3E;#080326;#080326;#080326;#080326;#080326;#080326;#2A223A"
@@ -512,7 +512,7 @@ const CustomView = () => {
                 y2="583"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#2B1001">
+                <stop stopColor="#2B1001">
                   <animate
                     attributeName="stop-color"
                     values="#2B1001;#311C10;#311C10;#140A04;#140A04;#1F0B00;#1F0B00;#1F0B00;#1F0B00;#1F0B00;#1F0B00;#2B1001;"
@@ -520,7 +520,7 @@ const CustomView = () => {
                     repeatCount="indefinite"
                   />
                 </stop>
-                <stop offset="1" stop-color="#2A223A">
+                <stop offset="1" stopColor="#2A223A">
                   <animate
                     attributeName="stop-color"
                     values="#2A223A;#3C375F;#3C375F;#172B3C;#172B3C;#080326;#080326;#080326;#080326;#080326;#080326;#2A223A;"
@@ -552,7 +552,7 @@ const CustomView = () => {
                 y2="79"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#30202C">
+                <stop stopColor="#30202C">
                   <animate
                     attributeName="stop-color"
                     values="#30202C;#372E47;#372E47;#1C252F;#1C252F;#0D041D;#0D041D;#0D041D;#0D041D;#0D041D;#0D041D;#30202C;"
@@ -560,7 +560,7 @@ const CustomView = () => {
                     repeatCount="indefinite"
                   />
                 </stop>
-                <stop offset="1" stop-color="#2A223A">
+                <stop offset="1" stopColor="#2A223A">
                   <animate
                     attributeName="stop-color"
                     values="#2A223A;#3C375F;#3C375F;#172B3C;#172B3C;#080326;#080326;#080326;#080326;#080326;#080326;#2A223A;"
@@ -592,7 +592,7 @@ const CustomView = () => {
                 y2="79"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#B788CF">
+                <stop stopColor="#B788CF">
                   <animate
                     attributeName="stop-color"
                     values="#B788CF;#C8B9CD;#C8B9CD;#E2CDD3;#E2CDD3;#492F5A;#492F5A;#492F5A;#492F5A;#492F5A;#492F5A;#B788CF;"
@@ -600,7 +600,7 @@ const CustomView = () => {
                     repeatCount="indefinite"
                   />
                 </stop>
-                <stop offset="0.488076" stop-color="#2A223A">
+                <stop offset="0.488076" stopColor="#2A223A">
                   <animate
                     attributeName="stop-color"
                     values="#2A223A;#3C375F;#3C375F;#172B3C;#172B3C;#080326;#080326;#080326;#080326;#080326;#080326;#2A223A;"
@@ -632,7 +632,7 @@ const CustomView = () => {
                 y2="91"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#4A3351">
+                <stop stopColor="#4A3351">
                   <animate
                     attributeName="stop-color"
                     values="#4A3351;#2D3049;#2D3049;#142643;#142643;#302035;#302035;#302035;#302035;#302035;#302035;#4A3351;"
@@ -640,7 +640,7 @@ const CustomView = () => {
                     repeatCount="indefinite"
                   />
                 </stop>
-                <stop offset="1" stop-color="#2A223A">
+                <stop offset="1" stopColor="#2A223A">
                   <animate
                     attributeName="stop-color"
                     values="#2A223A;#3C375F;#3C375F;#172B3C;#172B3C;#080326;#080326;#080326;#080326;#080326;#080326;#2A223A;"
@@ -695,7 +695,7 @@ const CustomView = () => {
                   rx="15.5"
                   ry="10.5"
                   fill="#E9E9E9"
-                  fill-opacity="0.61"
+                  fillOpacity="0.61"
                 />
                 <ellipse
                   cx="143.18"
@@ -712,7 +712,7 @@ const CustomView = () => {
                   ry="10.9561"
                   transform="rotate(22.8654 271.639 112.69)"
                   fill="#D9D9D9"
-                  fill-opacity="0.51"
+                  fillOpacity="0.51"
                 />
                 <ellipse
                   cx="279.124"
@@ -721,22 +721,22 @@ const CustomView = () => {
                   ry="9.78481"
                   transform="rotate(16.0308 279.124 161.111)"
                   fill="#C4C4C4"
-                  fill-opacity="0.53"
+                  fillOpacity="0.53"
                 />
                 <path
                   d="M247 312.533C247 315.884 241.596 320 236.426 320C231.256 320 225 316.584 225 313.233C225 309.883 231.256 306 236.426 306C241.596 306 247 309.183 247 312.533Z"
                   fill="#C4C4C4"
-                  fill-opacity="0.65"
+                  fillOpacity="0.65"
                 />
                 <path
                   d="M284 283C284 290.18 272.456 299 261.41 299C250.364 299 244 289.5 240 283C240 275.82 250.364 269 261.41 269C272.456 269 284 275.82 284 283Z"
                   fill="#CECECE"
-                  fill-opacity="0.54"
+                  fillOpacity="0.54"
                 />
                 <path
                   d="M143 314.5C143 322.784 135.993 322 125.5 322C115.007 322 101 306.284 101 298C101 289.716 110.007 289 120.5 289C130.993 289 143 306.216 143 314.5Z"
                   fill="#D3D3D3"
-                  fill-opacity="0.68"
+                  fillOpacity="0.68"
                 />
                 <ellipse cx="287" cy="186" rx="3" ry="2" fill="#DCDCDC" />
                 <ellipse cx="265.5" cy="221" rx="3.5" ry="3" fill="#E0E0E0" />
@@ -747,7 +747,7 @@ const CustomView = () => {
                   rx="5.5"
                   ry="4"
                   fill="#C4C4C4"
-                  fill-opacity="0.5"
+                  fillOpacity="0.5"
                 />
                 <ellipse
                   cx="191"
@@ -755,7 +755,7 @@ const CustomView = () => {
                   rx="3"
                   ry="1.5"
                   fill="#C4C4C4"
-                  fill-opacity="0.67"
+                  fillOpacity="0.67"
                 />
                 <ellipse
                   cx="151.5"
@@ -763,7 +763,7 @@ const CustomView = () => {
                   rx="1.5"
                   ry="1"
                   fill="#C4C4C4"
-                  fill-opacity="0.59"
+                  fillOpacity="0.59"
                 />
                 <ellipse
                   cx="68.6869"
@@ -772,12 +772,12 @@ const CustomView = () => {
                   ry="4.29568"
                   transform="rotate(22.2225 68.6869 98.921)"
                   fill="#C4C4C4"
-                  fill-opacity="0.56"
+                  fillOpacity="0.56"
                 />
                 <path
                   d="M209.5 245C209.5 251.904 200.546 256 189.5 256C178.454 256 165.5 254.904 165.5 248C165.5 241.096 168.954 232 180 232C191.046 232 209.5 238.096 209.5 245Z"
                   fill="#DADADA"
-                  fill-opacity="0.72"
+                  fillOpacity="0.72"
                 />
                 <ellipse
                   cx="85.0001"
@@ -794,7 +794,7 @@ const CustomView = () => {
                   ry="2"
                   transform="rotate(15.6472 126.499 93.9998)"
                   fill="#C4C4C4"
-                  fill-opacity="0.58"
+                  fillOpacity="0.58"
                 />
                 <ellipse
                   cx="83.9506"
@@ -803,7 +803,7 @@ const CustomView = () => {
                   ry="2.04763"
                   transform="rotate(-18.1713 83.9506 147.827)"
                   fill="#C4C4C4"
-                  fill-opacity="0.48"
+                  fillOpacity="0.48"
                 />
                 <ellipse
                   cx="153.5"
@@ -811,12 +811,12 @@ const CustomView = () => {
                   rx="7.5"
                   ry="5"
                   fill="#C4C4C4"
-                  fill-opacity="0.55"
+                  fillOpacity="0.55"
                 />
                 <path
                   d="M192.853 320.854C192.239 324.11 187.934 325.022 182.506 323.997C177.079 322.973 171.893 322.754 172.508 319.498C173.122 316.241 176.573 312.976 182 314C187.427 315.024 193.468 317.598 192.853 320.854Z"
                   fill="#C4C4C4"
-                  fill-opacity="0.49"
+                  fillOpacity="0.49"
                 />
                 <ellipse
                   cx="66.9219"
@@ -825,7 +825,7 @@ const CustomView = () => {
                   ry="3.5"
                   transform="rotate(36.7246 66.9219 274.661)"
                   fill="#C4C4C4"
-                  fill-opacity="0.43"
+                  fillOpacity="0.43"
                 />
                 <ellipse
                   cx="198"
@@ -833,22 +833,22 @@ const CustomView = () => {
                   rx="4"
                   ry="1.5"
                   fill="#C4C4C4"
-                  fill-opacity="0.69"
+                  fillOpacity="0.69"
                 />
                 <path
                   d="M188 337C188 339.209 186.881 339.5 185.5 339.5C184.119 339.5 183 339.209 183 337C183 334.791 184.119 334.5 185.5 334.5C186.881 334.5 188 334.791 188 337Z"
                   fill="#C4C4C4"
-                  fill-opacity="0.57"
+                  fillOpacity="0.57"
                 />
                 <path
                   d="M200.5 345C200.5 346.933 200.376 348.002 198.166 348.002C195.957 348.002 196.157 346.945 196.157 345.012C196.157 343.079 196.147 342.492 198.156 342.002C200.365 342.002 200.5 343.067 200.5 345Z"
                   fill="#C4C4C4"
-                  fill-opacity="0.83"
+                  fillOpacity="0.83"
                 />
                 <path
                   d="M220 335.5C220 336.881 218.761 338 216 338C213.239 338 212.5 336.881 212.5 335.5C212.5 334.119 213.239 333 216 333C218.761 333 220 334.119 220 335.5Z"
                   fill="#C4C4C4"
-                  fill-opacity="0.53"
+                  fillOpacity="0.53"
                 />
                 <defs>
                   <linearGradient
@@ -859,8 +859,8 @@ const CustomView = () => {
                     y2="294.5"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#FFFBFB" />
-                    <stop offset="1" stop-color="#D9D9D9" />
+                    <stop stopColor="#FFFBFB" />
+                    <stop offset="1" stopColor="#D9D9D9" />
                   </linearGradient>
                   <linearGradient
                     id="paint1_moon"
@@ -870,8 +870,8 @@ const CustomView = () => {
                     y2="290"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#F9F9F9" />
-                    <stop offset="0.986847" stop-color="#DEDEDE" />
+                    <stop stopColor="#F9F9F9" />
+                    <stop offset="0.986847" stopColor="#DEDEDE" />
                   </linearGradient>
                   <linearGradient
                     id="paint2_moon"
@@ -881,8 +881,8 @@ const CustomView = () => {
                     y2="137.601"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#FBFBFB" />
-                    <stop offset="1" stop-color="#EAEAEA" />
+                    <stop stopColor="#FBFBFB" />
+                    <stop offset="1" stopColor="#EAEAEA" />
                   </linearGradient>
                   <linearGradient
                     id="paint3_moon"
@@ -892,9 +892,9 @@ const CustomView = () => {
                     y2="183.164"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="white" />
-                    <stop offset="0.0001" stop-color="#F9F9F9" />
-                    <stop offset="1" stop-color="#FDFBFB" />
+                    <stop stopColor="white" />
+                    <stop offset="0.0001" stopColor="#F9F9F9" />
+                    <stop offset="1" stopColor="#FDFBFB" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -1009,22 +1009,22 @@ const CustomView = () => {
           <path
             d="M215.453 182.765C215.453 181.065 299.747 110.059 342.905 75.122L241.752 169.31C199.605 204.482 115.312 274.403 115.312 272.704C115.312 270.579 215.453 184.89 215.453 182.765Z"
             fill="#A4DBFA"
-            fill-opacity="0.6"
+            fillOpacity="0.6"
           />
           <path
             d="M215.453 314.486C215.453 312.786 299.747 241.78 342.905 206.843L241.752 301.03C199.605 336.203 115.312 406.124 115.312 404.424C115.312 402.3 215.453 316.61 215.453 314.486Z"
             fill="#A4DBFA"
-            fill-opacity="0.6"
+            fillOpacity="0.6"
           />
           <path
             d="M1588.15 194.847C1588.15 193.148 1672.44 122.141 1715.6 87.2044L1614.45 181.392C1572.3 216.565 1488.01 286.486 1488.01 284.786C1488.01 282.661 1588.15 196.972 1588.15 194.847Z"
             fill="#A4DBFA"
-            fill-opacity="0.6"
+            fillOpacity="0.6"
           />
           <path
             d="M1598.77 322.383C1598.77 320.684 1683.07 249.677 1726.23 214.74L1625.07 308.928C1582.93 344.101 1498.63 414.021 1498.63 412.322C1498.63 410.197 1598.77 324.508 1598.77 322.383Z"
             fill="#A4DBFA"
-            fill-opacity="0.6"
+            fillOpacity="0.6"
           />
           <defs>
             <linearGradient
@@ -1035,8 +1035,8 @@ const CustomView = () => {
               y2="870.948"
               gradientUnits="userSpaceOnUse"
             >
-              <stop offset="0.580408" stop-color="#6C131A" />
-              <stop offset="0.713542" stop-color="#6C131A" stop-opacity="0" />
+              <stop offset="0.580408" stopColor="#6C131A" />
+              <stop offset="0.713542" stopColor="#6C131A" stopOpacity="0" />
             </linearGradient>
             <linearGradient
               id="paint1_window"
@@ -1046,39 +1046,39 @@ const CustomView = () => {
               y2="872"
               gradientUnits="userSpaceOnUse"
             >
-              <stop offset="0.571989" stop-color="#6C131A" />
-              <stop offset="0.685584" stop-color="#6C131A" stop-opacity="0" />
+              <stop offset="0.571989" stopColor="#6C131A" />
+              <stop offset="0.685584" stopColor="#6C131A" stopOpacity="0" />
             </linearGradient>
           </defs>
         </svg>
       </div>
-      <div class="couch">
+      <div className="couch">
         <img src={couchImg} alt="" />
       </div>
-      <div class="cat" onMouseOver={pettingHandler} onMouseLeave={stopPetting}>
+      <div className="cat" onMouseOver={pettingHandler} onMouseLeave={stopPetting}>
         <audio src={purringsound} ref={purringRef}></audio>
         <img src={kitty} alt="" />
-        <div class="tail">
-          <div class="tail-segment">
-            <div class="tail-segment">
-              <div class="tail-segment">
-                <div class="tail-segment">
-                  <div class="tail-segment">
-                    <div class="tail-segment">
-                      <div class="tail-segment">
-                        <div class="tail-segment">
-                          <div class="tail-segment">
-                            <div class="tail-segment">
-                              <div class="tail-segment">
-                                <div class="tail-segment">
-                                  <div class="tail-segment">
-                                    <div class="tail-segment">
-                                      <div class="tail-segment">
-                                        <div class="tail-segment">
-                                          <div class="tail-segment">
-                                            <div class="tail-segment">
-                                              <div class="tail-segment">
-                                                <div class="tail-segment"></div>
+        <div className="tail">
+          <div className="tail-segment">
+            <div className="tail-segment">
+              <div className="tail-segment">
+                <div className="tail-segment">
+                  <div className="tail-segment">
+                    <div className="tail-segment">
+                      <div className="tail-segment">
+                        <div className="tail-segment">
+                          <div className="tail-segment">
+                            <div className="tail-segment">
+                              <div className="tail-segment">
+                                <div className="tail-segment">
+                                  <div className="tail-segment">
+                                    <div className="tail-segment">
+                                      <div className="tail-segment">
+                                        <div className="tail-segment">
+                                          <div className="tail-segment">
+                                            <div className="tail-segment">
+                                              <div className="tail-segment">
+                                                <div className="tail-segment"></div>
                                               </div>
                                             </div>
                                           </div>

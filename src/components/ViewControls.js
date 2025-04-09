@@ -65,7 +65,6 @@ const ViewControls = ({ ambiance, setAmbiance }) => {
 
   //toggle snow
   useEffect(() => {
-    console.log("snow");
     if (isSnowing) {
       snow.start();
     } else {

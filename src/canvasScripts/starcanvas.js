@@ -38,29 +38,31 @@ export const Starcanvas = function starcanvas() {
       this.draw();
     };
   }
-  function comet() {
-    this.x = Math.random() * (canvas.width - 100);
-    this.y = -50;
+  // function comet() {
+  //   this.x = Math.random() * (canvas.width - 100);
+  //   this.y = -50;
 
-    comet.prototype.draw = function () {
-      //draw a comet shape-ish
-      ctx.beginPath();
-      ctx.fillStyle = "rgba(255,255,255,.8)";
-      ctx.arc(this.x, this.y, 10, Math.PI / 4.5, Math.PI, false);
-      ctx.lineTo(this.x + 35, this.y - 180);
-      ctx.lineTo(this.x + 19, this.y - 90);
-      ctx.lineTo(this.x + 40, this.y - 180);
-      ctx.closePath();
-      ctx.shadowColor = "rgba(122,177,188,.9)";
-      ctx.shadowBlur = 45;
-      ctx.fill();
-    };
-    comet.prototype.update = function () {
-      this.y += 40;
-      this.x -= 8;
-      this.draw();
-    };
-  }
+  //   comet.prototype.draw = function () {
+  //     //draw a comet shape-ish
+  //     ctx.beginPath();
+  //     ctx.fillStyle = "rgba(255,255,255,.8)";
+  //     ctx.arc(this.x, this.y, 10, Math.PI / 4.5, Math.PI, false);
+  //     ctx.lineTo(this.x + 35, this.y - 180);
+  //     ctx.lineTo(this.x + 19, this.y - 90);
+  //     ctx.lineTo(this.x + 40, this.y - 180);
+  //     ctx.closePath();
+  //     ctx.shadowColor = "rgba(122,177,188,.9)";
+  //     ctx.shadowBlur = 45;
+  //     ctx.fill();
+  //   };
+  //   comet.prototype.update = function () {
+  //     this.y += 40;
+  //     this.x -= 8;
+  //     this.draw();
+  //   };
+  // }
+
+
 
   let stars = [];
   let comets = [];
@@ -74,7 +76,7 @@ export const Starcanvas = function starcanvas() {
   //create new comet
   setInterval(() => {
     if (!day) {
-      comets.push(new comet());
+      // comets.push(new comet());
     }
   }, 10000);
   //clear the comets

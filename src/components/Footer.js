@@ -13,7 +13,7 @@ const Footer = () => {
         lineHeight: "10vh",
       }}
     >
-      &copy;2020 Designed and Built by Dave Darsa.
+      &copy;2020 Designed and Built by Davit Darsavelidze.
     </div>
   );
 };

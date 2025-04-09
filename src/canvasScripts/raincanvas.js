@@ -141,7 +141,6 @@ export const Raincanvas = function () {
     animID = requestAnimationFrame(animate);
   }
   function pause() {
-    console.log("paused");
     cancelAnimationFrame(animID);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     animID = null;
